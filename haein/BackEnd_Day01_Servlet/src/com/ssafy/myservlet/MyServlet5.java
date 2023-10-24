@@ -4,11 +4,12 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-// 해당 클래스를 서블릿으로 만들기 위해서는 Servlet을 구현해야한다.
+@WebServlet("/MyServlet2")
 public class MyServlet5 extends HttpServlet{
 
 	private static final long serialVersionUID = 1L;
@@ -21,7 +22,7 @@ public class MyServlet5 extends HttpServlet{
 		writer.append("<title>Hello</title>");
 		writer.append("</head>");
 		writer.append("<body>");
-		writer.append("<h1>Hello Servlet4!</h1>");
+		writer.append("<h1>Hello Servlet5!</h1>");
 		writer.append("</body>");
 		writer.append("</html>");
 	}
